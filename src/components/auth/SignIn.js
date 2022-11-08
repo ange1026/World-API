@@ -42,7 +42,7 @@ const SignIn = (props) => {
 					variant: 'success',
 				})
 			)
-			.then(() => navigate('/worlds'))
+			.then(() => navigate('/countries'))
 			.catch((error) => {
                 setEmail('')
                 setPassword('')

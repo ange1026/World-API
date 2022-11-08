@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { Container, Card, Button } from 'react-bootstrap'
 import { worldDelete, worldShow } from '../../api/world'
 // import PetUpdate from './PetUpdate' <--no longer using in lieu of the modal
-import EditPetModal from './EditPetModal'
+
 
 
 const cardContainerLayout = {
@@ -57,7 +57,7 @@ const WorldShow = ({ user, msgAlert }) => {
         })
     }
    
-    if (deleted) navigate('/world')
+    if (deleted) navigate('/countries')
 
 
     return (
@@ -95,7 +95,7 @@ const WorldShow = ({ user, msgAlert }) => {
             
             </Container>
 
-            <EditPetModal 
+            <EditCountryModal 
                 user={user}
                 world={world}
                 show={editModalShow}

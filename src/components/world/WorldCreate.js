@@ -1,5 +1,5 @@
 import React, {useState}from "react";
-import { worldCreate } from "../api/world";
+import { worldCreate } from "../../api/world";
 
 const WorldCreate = (user, msgAlert) => {
 

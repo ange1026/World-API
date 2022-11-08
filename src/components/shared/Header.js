@@ -14,7 +14,7 @@ const authenticatedOptions = (
 			</Link>
 		</Nav.Item>
 		<Nav.Item className='m-2'>
-			<Link to='worlds' style={linkStyle}>
+			<Link to='countries' style={linkStyle}>
 				Create Country
 			</Link>
 		</Nav.Item>
@@ -41,7 +41,7 @@ const unauthenticatedOptions = (
 const alwaysOptions = (
 	<>
 		<Nav.Link>
-			<Link to='/' style={linkStyle}>
+			<Link to='/countries' style={linkStyle}>
 				Home
 			</Link>
 		</Nav.Link>
@@ -51,7 +51,7 @@ const alwaysOptions = (
 const Header = ({ user }) => (
 	<Navbar bg='dark' variant='dark' expand='md'>
 		<Navbar.Brand className='m-2'>
-            <Link to='/' style={linkStyle}>
+            <Link to='/countries' style={linkStyle}>
                 Around The World
             </Link>
         </Navbar.Brand>

@@ -4,9 +4,9 @@ import axios from 'axios'
 export const worldCreate = (data, user) => {
 	return axios({
 		method: 'POST',
-		url: apiUrl + '/world',
+		url: apiUrl + '/countries',
 		data: {
-			world: data, 
+			country: data, 
 		},
         headers: {
 			Authorization: `Token token=${user.token}`,
@@ -17,23 +17,23 @@ export const worldCreate = (data, user) => {
 export const worldIndex = (user) => {
 	return axios({
 		method: 'GET',
-		url: apiUrl + '/world'
+		url: apiUrl + '/countries'
 	})
 }
 
-export const woeldShow = (user, id) => {
+export const worldShow = (user, id) => {
 	return axios({
 		method: 'GET',
-		url: apiUrl + '/world/' + id
+		url: apiUrl + '/countries/' + id
 	})
 }
 
 export const worldUpdate = (data, user, id) => {
 	return axios({
 		method: 'PATCH',
-		url: apiUrl + '/world/' + id,
+		url: apiUrl + '/countries/' + id,
 		data: {
-			world: data,
+			country: data,
 		},
 		headers: {
 			Authorization: `Token token=${user.token}`,
@@ -44,7 +44,7 @@ export const worldUpdate = (data, user, id) => {
 export const worldDelete = (user, id) => {
 	return axios({
 		method: 'DELETE',
-		url: apiUrl + '/world/' + id,
+		url: apiUrl + '/countries/' + id,
 		headers: {
 			Authorization: `Token token=${user.token}`,
 		},

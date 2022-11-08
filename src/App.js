@@ -12,7 +12,7 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
-import WorldCreate from './components/WorldCreate'
+import WorldCreate from './components/world/WorldCreate'
 
 const App = () => {
 
@@ -45,7 +45,7 @@ const App = () => {
 			<Fragment>
 				<Header user={user} />
 				<Routes>
-					<Route path='/worlds' element={<Home msgAlert={msgAlert} user={user} />} />
+					<Route path='/countries' element={<Home msgAlert={msgAlert} user={user} />} />
 					<Route
 						path='/sign-up'
 						element={<SignUp msgAlert={msgAlert} setUser={setUser} />}
@@ -70,7 +70,7 @@ const App = () => {
               </RequireAuth>}
           />
 		   <Route
-            path='/worlds'
+            path='/countries'
             element={
               <RequireAuth user={user}>
                 <WorldCreate msgAlert={msgAlert} user={user} />

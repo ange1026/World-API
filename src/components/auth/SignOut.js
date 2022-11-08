@@ -25,7 +25,7 @@ const SignOut = (props) => {
     }
 
     const onCancel = () => {
-        navigate('/')
+        navigate('/countries')
     }
 
 	return (
